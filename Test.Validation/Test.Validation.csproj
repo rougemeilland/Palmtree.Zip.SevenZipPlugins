@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net8.0;net7.0</TargetFrameworks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Palmtree.Core" Version="1.7.1-alpha" />
+    <PackageReference Include="Palmtree.IO" Version="1.4.4-alpha" />
+    <PackageReference Include="Palmtree.IO.Compression.Archive.Zip" Version="1.4.7-alpha" />
+    <PackageReference Include="Palmtree.SevenZip.Compression.Wrapper.NET.Engine" Version="23.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Palmtree.Zip.SevenZipPlugin.Bzip2\Palmtree.Zip.SevenZipPlugin.Bzip2.csproj" />
+    <ProjectReference Include="..\Palmtree.Zip.SevenZipPlugin.Deflate64\Palmtree.Zip.SevenZipPlugin.Deflate64.csproj" />
+    <ProjectReference Include="..\Palmtree.Zip.SevenZipPlugin.Deflate\Palmtree.Zip.SevenZipPlugin.Deflate.csproj" />
+    <ProjectReference Include="..\Palmtree.Zip.SevenZipPlugin.Lzma\Palmtree.Zip.SevenZipPlugin.Lzma.csproj" />
+  </ItemGroup>
+
+</Project>

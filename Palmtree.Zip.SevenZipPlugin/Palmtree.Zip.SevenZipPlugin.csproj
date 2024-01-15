@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net7.0</TargetFrameworks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+    <Product>Zip compression plugin with 7-zip</Product>
+    <Copyright>© 2024 Palmtree Software</Copyright>
+    <PackageProjectUrl>https://github.com/rougemeilland/Palmtree.Zip.SevenZipPlugins</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Palmtree Software</Authors>
+    <Description>This is a plugin package for a compression library using 7-zip.</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>zip plugin</PackageTags>
+    <RepositoryUrl>https://github.com/rougemeilland/Palmtree.Zip.SevenZipPlugins</RepositoryUrl>
+    <Platforms>AnyCPU</Platforms>
+    <AssemblyName>Palmtree.IO.Compression.Stream.Plugin.SevenZip</AssemblyName>
+    <RootNamespace>Palmtree.IO.Compression.Stream.Plugin.SevenZip</RootNamespace>
+    <PackageId>$()</PackageId>
+    <Title>$(AssemblyName)</Title>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <NoWarn>1701;1702;IDE0290;CA1510</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <NoWarn>1701;1702;IDE0290;CA1510</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <NoWarn>1701;1702;IDE0290;CA1510</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <NoWarn>1701;1702;IDE0290;CA1510</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="docs\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="docs\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
