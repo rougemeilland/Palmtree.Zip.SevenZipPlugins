@@ -5,6 +5,10 @@
     {
         internal const CompressionMethodId COMPRESSION_METHOD_ID = CompressionMethodId.BZIP2;
 
+        private Bzip2CoderPlugin()
+        {
+        }
+
         public static void EnablePlugin()
         {
             CompressionCoderPlugin.Register(new Bzip2DecoderPlugin());

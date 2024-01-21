@@ -5,6 +5,10 @@
     {
         internal const CompressionMethodId COMPRESSION_METHOD_ID = CompressionMethodId.Deflate;
 
+        private DeflateCoderPlugin()
+        {
+        }
+
         public static void EnablePlugin()
         {
             CompressionCoderPlugin.Register(new DeflateDecoderPlugin());

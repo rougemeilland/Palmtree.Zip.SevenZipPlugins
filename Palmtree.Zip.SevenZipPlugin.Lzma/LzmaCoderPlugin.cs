@@ -17,6 +17,10 @@ namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
             LzmaSdkVetrsion = checked((UInt16)((majorVersion << 8) | minorVersion));
         }
 
+        private LzmaCoderPlugin()
+        {
+        }
+
         public static void EnablePlugin()
         {
             CompressionCoderPlugin.Register(new LzmaDecoderPlugin());
