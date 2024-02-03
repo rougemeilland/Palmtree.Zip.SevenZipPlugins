@@ -29,9 +29,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Palmtree.Core" Version="1.9.2-alpha" />
-    <PackageReference Include="Palmtree.IO" Version="1.7.1-alpha" />
-    <PackageReference Include="Palmtree.IO.Compression.Archive.Zip" Version="1.5.7-alpha" />
+    <PackageReference Include="Palmtree.Core" Version="1.10.0-alpha" />
+    <PackageReference Include="Palmtree.IO" Version="1.7.2-alpha" />
+    <PackageReference Include="Palmtree.IO.Compression.Archive.Zip" Version="1.5.8-alpha" />
     <PackageReference Include="Palmtree.SevenZip.Compression.Wrapper.NET.Engine" Version="23.1.1" />
   </ItemGroup>
 
