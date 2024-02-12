@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using SevenZip.Compression.Lzma;
 
 namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
@@ -27,13 +28,13 @@ namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
             {
                 Span<Byte> fixedHeader = stackalloc Byte[4];
                 if (baseStream.ReadBytes(fixedHeader) != fixedHeader.Length)
-                    throw new UnexpectedEndOfStreamException();
+                    throw new EndOfStreamException();
                 var lengthOfContentProperties = fixedHeader.Slice(2, 2).ToUInt16LE();
                 if (lengthOfContentProperties != LzmaDecoder.CONTENT_PROPERTY_SIZE)
                     throw new DataErrorException($"The format of the LZMA header is incorrect.");
                 var contentProperties = new Byte[LzmaDecoder.CONTENT_PROPERTY_SIZE];
                 if (baseStream.ReadBytes(contentProperties) != contentProperties.Length)
-                    throw new UnexpectedEndOfStreamException();
+                    throw new EndOfStreamException();
                 return new Decoder(
                     baseStream,
                     unpackedStreamSize,
