@@ -4,7 +4,7 @@ using SevenZip.Compression.Lzma;
 
 namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
 {
-    internal class LzmaEncoderPlugin
+    internal sealed class LzmaEncoderPlugin
         : ICompressionCoder, ICompressionEncoder
     {
         CompressionMethodId ICompressionCoder.CompressionMethodId => LzmaCoderPlugin.COMPRESSION_METHOD_ID;

@@ -4,7 +4,7 @@ using SevenZip.Compression.Deflate;
 
 namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
 {
-    internal class DeflateEncoderPlugin
+    internal sealed class DeflateEncoderPlugin
         : ICompressionCoder, ICompressionEncoder
     {
         CompressionMethodId ICompressionCoder.CompressionMethodId => DeflateCoderPlugin.COMPRESSION_METHOD_ID;

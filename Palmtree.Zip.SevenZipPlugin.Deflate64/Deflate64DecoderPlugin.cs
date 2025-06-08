@@ -3,10 +3,10 @@ using SevenZip.Compression.Deflate64;
 
 namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
 {
-    internal class Deflate64DecoderPlugin
+    internal sealed class Deflate64DecoderPlugin
         : ICompressionCoder, ICompressionHierarchicalDecoder
     {
-        private class Decoder
+        private sealed class Decoder
             : HierarchicalDecoder
         {
             public Decoder(
@@ -19,12 +19,12 @@ namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
             {
             }
 
-            public static ISequentialInputByteStream Create(
+            public static Decoder Create(
                 ISequentialInputByteStream baseStream,
                 UInt64 unpackedStreamSize,
                 IProgress<(UInt64 inCompressedStreamProcessedCount, UInt64 outUncompressedStreamProcessedCount)>? progress,
                 Boolean leaveOpen)
-                => new Decoder(
+                => new(
                     baseStream,
                     unpackedStreamSize,
                     progress,
@@ -42,10 +42,8 @@ namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
             IProgress<(UInt64 inCompressedStreamProcessedCount, UInt64 outUncompressedStreamProcessedCount)>? progress,
             Boolean leaveOpen)
         {
-            if (baseStream is null)
-                throw new ArgumentNullException(nameof(baseStream));
-            if (option is null)
-                throw new ArgumentNullException(nameof(option));
+            ArgumentNullException.ThrowIfNull(baseStream);
+            ArgumentNullException.ThrowIfNull(option);
             if (option is not ZipDeflate64CompressionCoderOption)
                 throw new ArgumentException($"Illegal {nameof(option)} data", nameof(option));
 

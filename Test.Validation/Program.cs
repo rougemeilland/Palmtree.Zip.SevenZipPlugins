@@ -9,7 +9,7 @@ using Palmtree.IO.Compression.Stream.Plugin.SevenZip;
 
 namespace Test.Validation
 {
-    internal class Program
+    internal sealed class Program
     {
         static Program()
         {
@@ -21,7 +21,7 @@ namespace Test.Validation
             LzmaCoderPlugin.EnablePlugin();
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var fileList =
                 args.EnumerateFilesFromArgument(true)

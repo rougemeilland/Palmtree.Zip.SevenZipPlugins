@@ -4,10 +4,10 @@ using SevenZip.Compression.Lzma;
 
 namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
 {
-    internal class LzmaDecoderPlugin
+    internal sealed class LzmaDecoderPlugin
         : ICompressionCoder, ICompressionHierarchicalDecoder
     {
-        private class Decoder
+        private sealed class Decoder
             : HierarchicalDecoder
         {
             public Decoder(
@@ -20,7 +20,7 @@ namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
             {
             }
 
-            public static ISequentialInputByteStream Create(
+            public static Decoder Create(
                 ISequentialInputByteStream baseStream,
                 UInt64 unpackedStreamSize,
                 IProgress<(UInt64 inCompressedStreamProcessedCount, UInt64 outUncompressedStreamProcessedCount)>? progress,

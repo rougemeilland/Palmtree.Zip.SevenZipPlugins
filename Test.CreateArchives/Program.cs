@@ -7,7 +7,7 @@ using Palmtree.IO.Compression.Stream.Plugin.SevenZip;
 
 namespace Test.CreateArchives
 {
-    internal class Program
+    internal sealed class Program
     {
         private const string CLEAR_LINE = "\u001b[0K";
         private const string CARRIGE_RETURN = "\r";
@@ -20,7 +20,7 @@ namespace Test.CreateArchives
             LzmaCoderPlugin.EnablePlugin();
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             const ulong MAX_CONTENT_LENGTH = 1024 * 1024;
             var baseDirectory = new DirectoryPath(args[0]);

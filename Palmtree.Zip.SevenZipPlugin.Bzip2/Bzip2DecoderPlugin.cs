@@ -3,10 +3,10 @@ using SevenZip.Compression.Bzip2;
 
 namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
 {
-    internal class Bzip2DecoderPlugin
+    internal sealed class Bzip2DecoderPlugin
         : ICompressionCoder, ICompressionHierarchicalDecoder
     {
-        private class Decoder
+        private sealed class Decoder
             : HierarchicalDecoder
         {
             private Decoder(
@@ -19,12 +19,12 @@ namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
             {
             }
 
-            public static ISequentialInputByteStream Create(
+            public static Decoder Create(
                 ISequentialInputByteStream baseStream,
                 UInt64 unpackedStreamSize,
                 IProgress<(UInt64 inCompressedStreamProcessedCount, UInt64 outUncompressedStreamProcessedCount)>? progress,
                 Boolean leaveOpen)
-                => new Decoder(
+                => new(
                     baseStream,
                     unpackedStreamSize,
                     progress,

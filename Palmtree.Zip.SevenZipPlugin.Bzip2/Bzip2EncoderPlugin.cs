@@ -4,7 +4,7 @@ using SevenZip.Compression.Bzip2;
 
 namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
 {
-    internal class Bzip2EncoderPlugin
+    internal sealed class Bzip2EncoderPlugin
         : ICompressionCoder, ICompressionEncoder
     {
         CompressionMethodId ICompressionCoder.CompressionMethodId => Bzip2CoderPlugin.COMPRESSION_METHOD_ID;
