@@ -6,10 +6,10 @@
     <Nullable>enable</Nullable>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <VersionPrefix>1.1.1</VersionPrefix>
+    <VersionPrefix>1.1.2</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
     <Product>Zip compression plugin (BZIP with 7-zip)</Product>
-    <Copyright>© 2024 Palmtree Software</Copyright>
+    <Copyright>© 2024-2025 Palmtree Software</Copyright>
     <PackageProjectUrl>https://github.com/rougemeilland/Palmtree.Zip.SevenZipPlugins</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -68,9 +68,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Palmtree.IO" Version="1.18.1-alpha" />
-    <PackageReference Include="Palmtree.IO.Compression.Stream" Version="1.4.16-alpha" />
-    <PackageReference Include="Palmtree.SevenZip.Compression.Wrapper.NET" Version="1.8.1-alpha" />
+    <PackageReference Include="Palmtree.IO" Version="1.19.0-alpha" />
+    <PackageReference Include="Palmtree.IO.Compression.Stream" Version="1.4.17-alpha" />
+    <PackageReference Include="Palmtree.SevenZip.Compression.Wrapper.NET" Version="1.8.2-alpha" />
   </ItemGroup>
 
   <ItemGroup>

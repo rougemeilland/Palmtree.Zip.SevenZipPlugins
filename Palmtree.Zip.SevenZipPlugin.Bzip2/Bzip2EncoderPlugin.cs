@@ -15,12 +15,9 @@ namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
             ICoderOption option,
             IProgress<(UInt64 inUncompressedStreamProcessedCount, UInt64 outCompressedStreamProcessedCount)>? progress)
         {
-            if (sourceStream is null)
-                throw new ArgumentNullException(nameof(sourceStream));
-            if (destinationStream is null)
-                throw new ArgumentNullException(nameof(destinationStream));
-            if (option is null)
-                throw new ArgumentNullException(nameof(option));
+            ArgumentNullException.ThrowIfNull(sourceStream);
+            ArgumentNullException.ThrowIfNull(destinationStream);
+            ArgumentNullException.ThrowIfNull(option);
             if (option is not ZipBzip2CompressionCoderOption encoderOption)
                 throw new ArgumentException($"Illegal {nameof(option)} data", nameof(option));
 

@@ -36,10 +36,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Palmtree.Core" Version="1.17.1-alpha" />
-    <PackageReference Include="Palmtree.Debug" Version="1.1.16-alpha" />
-    <PackageReference Include="Palmtree.IO" Version="1.18.1-alpha" />
-    <PackageReference Include="Palmtree.IO.Compression.Archive.Zip" Version="1.9.16-alpha" />
+    <PackageReference Include="Palmtree.Core" Version="1.18.0-alpha" />
+    <PackageReference Include="Palmtree.Debug" Version="1.1.17-alpha" />
+    <PackageReference Include="Palmtree.IO" Version="1.19.0-alpha" />
+    <PackageReference Include="Palmtree.IO.Compression.Archive.Zip" Version="1.9.17-alpha" />
     <PackageReference Include="Palmtree.SevenZip.Compression.Wrapper.NET.Engine" Version="23.1.1" />
   </ItemGroup>
 

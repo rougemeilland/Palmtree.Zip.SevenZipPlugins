@@ -54,10 +54,8 @@ namespace Palmtree.IO.Compression.Stream.Plugin.SevenZip
             IProgress<(UInt64 inCompressedStreamProcessedCount, UInt64 outUncompressedStreamProcessedCount)>? progress,
             Boolean leaveOpen)
         {
-            if (baseStream is null)
-                throw new ArgumentNullException(nameof(baseStream));
-            if (option is null)
-                throw new ArgumentNullException(nameof(option));
+            ArgumentNullException.ThrowIfNull(baseStream);
+            ArgumentNullException.ThrowIfNull(option);
             if (option is not ZipLzmaCompressionCoderOption)
                 throw new ArgumentException($"Illegal {nameof(option)} data", nameof(option));
 
