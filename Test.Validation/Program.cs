@@ -9,7 +9,7 @@ using Palmtree.IO.Compression.Stream.Plugin.SevenZip;
 
 namespace Test.Validation
 {
-    internal sealed class Program
+    internal static class Program
     {
         static Program()
         {

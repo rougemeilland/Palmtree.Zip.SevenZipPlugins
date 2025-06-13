@@ -7,7 +7,7 @@ using Palmtree.IO.Compression.Stream.Plugin.SevenZip;
 
 namespace Test.CreateArchives
 {
-    internal sealed class Program
+    internal static class Program
     {
         private const string CLEAR_LINE = "\u001b[0K";
         private const string CARRIGE_RETURN = "\r";
